@@ -26,7 +26,9 @@ const AddBook = () => {
       headers: {
         "Content-Type": "application/json",
       },
-    });
+      
+    }
+    );
 
     result = await result.json();
     console.warn(result);
@@ -38,6 +40,7 @@ const AddBook = () => {
       setPublicationYear("");
       setIsbn("");
       setDescription("");
+      window.location.href = '/';
     }
   };
 
