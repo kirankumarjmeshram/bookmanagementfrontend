@@ -8,7 +8,7 @@ const HomeScreen = () => {
 
   useEffect(()=>{
     const fetchBooks = async ()=>{
-      const {data} = await axios.get('/api/books');
+      const {data} = await axios.get('https://bookapp2-9ur9.onrender.com/api/books');
       setBooks(data);
     };
     fetchBooks();

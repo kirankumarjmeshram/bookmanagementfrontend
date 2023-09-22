@@ -13,7 +13,7 @@ const AddBook = () => {
   const [description, setDescription] = useState("");
 
   const handleOnSubmit = async (e) => {
-    let result = await fetch('/api/books', {
+    let result = await fetch('https://bookapp2-9ur9.onrender.com/api/books', {
       method: "post",
       body: JSON.stringify({
         title,

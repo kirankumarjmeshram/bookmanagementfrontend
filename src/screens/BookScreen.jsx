@@ -10,7 +10,7 @@ const BookScreen = () => {
 
   useEffect(() => {
     const fetchBook = async () => {
-      const { data } = await axios.get(`/api/books/${bookId}`);
+      const { data } = await axios.get(`https://bookapp2-9ur9.onrender.com/api/books/${bookId}`);
       setBook(data);
     };
     fetchBook();
