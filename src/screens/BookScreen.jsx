@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 import { Row, Col, Image, ListGroup, Button } from "react-bootstrap";
 import axios from "axios";
 
-const ProductScreen = () => {
+const BookScreen = () => {
   const [book, setBook] = useState([]);
   const { id: bookId } = useParams();
 
   useEffect(() => {
     const fetchBook = async () => {
-      const { data } = await axios.get(`https://bookapp2-9ur9.onrender.com/api/books/${bookId}`);
+      const { data } = await axios.get(`/api/books/${bookId}`);
       setBook(data);
     };
     fetchBook();
@@ -61,11 +61,6 @@ const ProductScreen = () => {
                       Delete
                     </Button>
                   </Col>
-                  {/* <Col>
-                    <Button className="btn-block" type="buttom">
-                      Update
-                    </Button>
-                  </Col> */}
                 </Row>
               </ListGroup.Item>
           </ListGroup>
@@ -75,4 +70,4 @@ const ProductScreen = () => {
   );
 };
 
-export default ProductScreen;
+export default BookScreen;

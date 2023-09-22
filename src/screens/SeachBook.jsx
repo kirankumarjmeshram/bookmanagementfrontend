@@ -9,7 +9,7 @@ const SearchBook = () => {
   const [results, setResults] = useState([]);
 
   const fetchData = (value) => {
-    fetch("https://bookapp2-9ur9.onrender.com/api/books")
+    fetch("/api/books")
       .then((response) => response.json())
       .then((json) => {
         const filteredResults = json.filter((el) =>
